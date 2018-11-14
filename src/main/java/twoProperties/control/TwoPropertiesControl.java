@@ -1,4 +1,4 @@
-package control;
+package twoProperties.control;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -9,9 +9,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.util.converter.NumberStringConverter;
-import model.OneModel;
+import twoProperties.model.TwoPropertiesModel;
 
-public class OneControler implements Initializable {
+public class TwoPropertiesControl implements Initializable {
 	
 	@FXML
     private Button motButton;
@@ -25,10 +25,10 @@ public class OneControler implements Initializable {
     @FXML
     private TextField nbLabel;
     
-    private OneModel model;
+    private TwoPropertiesModel model;
     
-    public OneControler() {
-    	model = new OneModel();
+    public TwoPropertiesControl() {
+    	model = new TwoPropertiesModel();
 	}
 
     @FXML

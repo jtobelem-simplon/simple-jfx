@@ -1,4 +1,4 @@
-package model;
+package twoProperties.model;
 
 import java.util.Collections;
 import java.util.List;
@@ -9,13 +9,13 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class OneModel {
+public class TwoPropertiesModel {
 	
 	StringProperty mot;
 	
 	IntegerProperty nb;
 	
-	public OneModel() {
+	public TwoPropertiesModel() {
 		mot = new SimpleStringProperty();
 		nb = new SimpleIntegerProperty();
 	}

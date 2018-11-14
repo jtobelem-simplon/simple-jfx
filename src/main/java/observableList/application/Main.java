@@ -1,31 +1,27 @@
-package application;
+package observableList.application;
 	
 import java.io.File;
 import java.net.URL;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			FXMLLoader loader = new FXMLLoader() ;
-			System.out.println("Working Directory = " + System.getProperty("user.dir"));
+			URL url = new File("src/main/java/observableListView/view/ObservableListView.fxml" ).toURI().toURL();
 
-			URL url = new File("src/main/java/view/OneGUI.fxml" ).toURI().toURL();
-
-			loader . setLocation ( url );
-			System.out.println(loader.getLocation());
-			BorderPane root = new BorderPane();
-			root= loader.load() ;
-			
+			BorderPane root = FXMLLoader.load(url);
+					
 			Scene scene = new Scene(root);
+			
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
