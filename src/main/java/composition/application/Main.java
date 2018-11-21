@@ -1,4 +1,4 @@
-package observableList.application;
+package composition.application;
 	
 import java.io.File;
 import java.net.URL;
@@ -14,7 +14,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			URL url = new File("src/main/java/observableListView/view/ObservableListView.fxml" ).toURI().toURL();
+			URL url = new File("src/main/java/composition/view/MainView.fxml" ).toURI().toURL();
 
 			BorderPane root = FXMLLoader.load(url);
 					

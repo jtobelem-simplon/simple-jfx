@@ -48,7 +48,11 @@ public class TwoPropertiesModel {
 	}
 	
 	public void multiplyNb() {
-		nb.set(nb.get()*2);
+		if (nb.get() == 0) {
+			nb.set(1);
+		} else {
+			nb.set(nb.get()*2);
+		}
 	}
 	
 
